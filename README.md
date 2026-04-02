@@ -63,6 +63,10 @@ TanStack Query's `refetchInterval: 300_000` polls `/api/wait-times` every 5 min.
 ### Mock API
 `GET /api/wait-times` returns mock data with slight random variation per call to simulate live data. Swap in a real DB/service in `app/api/wait-times/route.ts` when ready — the exported `WaitTimeData` interface keeps the frontend type-safe automatically.
 
+```
+curl "http://127.0.0.1:3000/api/wait-times"
+{"estimatedWaitMinutes":50,"patientsWaiting":34,"lastUpdated":"2026-04-02T04:20:16.854Z"}
+```
 ### Accessibility
 - Semantic HTML: nav, main, article, section, ol
 - aria-label on all interactive elements and landmark regions
@@ -74,3 +78,5 @@ TanStack Query's `refetchInterval: 300_000` polls `/api/wait-times` every 5 min.
 ### Responsive Layout
 - Stats grid: 1 column on mobile → 2 columns on sm+
 - Triage steps: 1 col → 2 col → 4 col
+
+![CareView-ER-Dashboard.png](CareView-ER-Dashboard.png)
